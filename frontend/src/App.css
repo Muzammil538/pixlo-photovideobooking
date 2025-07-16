@@ -1,0 +1,29 @@
+.login-or{
+  width: 100%;
+  text-align: center;
+  & span {
+    color: #fff;
+    background-color: transparent;
+    padding: 0 5px;
+  }
+}
+.login-or::before,
+.login-or::after {
+  content: "";
+  display: inline-block;
+  width: 40%;
+  height: 1px;
+  background-color: #ccc;
+  vertical-align: middle;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
