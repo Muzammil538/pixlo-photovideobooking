@@ -1,11 +1,20 @@
+// imports 
 import {BrowserRouter as Router , Routes, Route} from 'react-router'
+
+// styles
 import './App.css'
+
+// components
 import Navbar from './components/layout/Navbar'
-import Login from './pages/Login'
 import Footer from './components/layout/Footer'
-import Details from './pages/Details'
-import ForgotPassword from './pages/ForgotPassword'
-import VerifyCode from './pages/VerifyCode'
+
+// pages
+import Login from './pages/auth/Login'
+import Details from './pages/auth/Details'
+import ForgotPassword from './pages/auth/ForgotPassword'
+import VerifyCode from './pages/auth/VerifyCode'
+import Home from './pages/Home'
+
 
 
 function App() {
@@ -13,12 +22,12 @@ function App() {
 
   return (
     <>
-      <div className='min-h-screen bg-black w-full relative'>
+      <div className='min-h-screen bg-black text-white w-full relative overflow-x-auto overflow-y-hidden'>
         <Router>
-          <Navbar />
-          <main className='relative min-h-[cal(100vh-70px)] w-screen '>
+          
+          <main className='relative w-screen '>
             <Routes>
-              <Route path="/" element={<h1 className="text-white">Home Page</h1>} />
+              <Route path="/" element={<Home />} />
               <Route path='/login' element={<Login/>}/>
               <Route path='/details' element={<Details/>}/>
               <Route path='/verifycode' element={<VerifyCode />}/>
